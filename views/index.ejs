@@ -1,0 +1,10 @@
+<%- include('partials/header') %>
+<%- include('partials/navbar') %>
+    <% if(user){ %>
+    <% note.forEach( n => { %>
+    <p><%= n.title %></p>
+    <%- n.content %>
+    <% }) %>
+    <% } %>
+
+<%- include('partials/footer') %>

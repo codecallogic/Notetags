@@ -1,0 +1,29 @@
+<%- include('../partials/header') %>
+<%- include('../partials/navbar') %>
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <div class="col-5">
+                <form id="form" action="/create" method="post">
+                    <label for="title">Title</label>
+                    <div class="input-group mb-3">
+                        <input type="text" name="title" class="form-control" placeholder="Enter title.." required>
+                    </div>
+                        <label for="Tags">Tags</label>
+                        <input type="hidden" name="tags" id="tagValue" value="" required>
+                        <div class="input-group tag-container mb-3">
+                            <input placeholder="Enter tags" style="font-size:22px; font-weight:100; width:100%;">
+                    </div>
+                    <label for="mainImage">Image (optional)</label>
+                    <div class="input-group mb-3">
+                        <input type="text" name="image" class="form-control" placeholder="Enter image..">
+                    </div>
+                    <button type="submit" class="form-control btn btn-dark">Create Post</button>
+            </div>
+            <div class="col-7">
+                <label for="content">Write content below:</label>
+                <textarea name="content" cols="30" rows="10" class="form-control Typehere" required></textarea>
+            </div>
+                </form>
+        </div>
+    </div>
+<%- include('../partials/footer') %>
